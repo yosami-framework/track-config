@@ -1,6 +1,6 @@
 {
   "name": "track-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Configure for track.",
   "main": "lib/index.js",
   "repository": "alfa-jpn/track-config.git",
