@@ -1,6 +1,6 @@
 {
   "name": "track-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Configure for track.",
   "main": "lib/index.js",
   "repository": "alfa-jpn/track-config.git",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "eslint": "^4.17.0",
     "eslint-config-google": "^0.9.1",
-    "track-spec": "0.0.2"
+    "mithril": "^1.1.6",
+    "track-spec": "0.0.3"
   }
 }
