@@ -1,9 +1,9 @@
 {
   "name": "track-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Configure for track.",
   "main": "lib/index.js",
-  "repository": "alfa-jpn/track-config.git",
+  "repository": "yosami-framework/track-config.git",
   "scripts": {
     "linter": "eslint ./",
     "test": "ospec"
