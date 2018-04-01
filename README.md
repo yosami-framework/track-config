@@ -1,6 +1,8 @@
 # TrackConfig
 Configure for track.
 
+[![Build Status](https://travis-ci.org/yosami-framework/track-config.svg?branch=master)](https://travis-ci.org/yosami-framework/track-config)
+
 ## Installation
 
 ### npm
