@@ -26,4 +26,29 @@ t.describe('TrackConfig', () => {
       t.expect(global.TrackConfigs.loader).equals('fuga');
     });
   });
+
+  t.describe('#relativeUrlRoot', () => {
+    const subject = (() => TrackConfig.relativeUrlRoot);
+
+    t.beforeEach(() => {
+      global.TrackConfigs.relativeUrlRoot = 'hoge';
+    });
+
+    t.it('Get .relativeUrlRoot', () => {
+      t.expect(subject()).equals('hoge');
+    });
+  });
+
+  t.describe('#relativeUrlRoot=', () => {
+    const subject = (() => {
+      TrackConfig.configure((c) => {
+        c.relativeUrlRoot = 'fuga';
+      });
+    });
+
+    t.it('Set .relativeUrlRoot', () => {
+      subject();
+      t.expect(global.TrackConfigs.relativeUrlRoot).equals('fuga');
+    });
+  });
 });
