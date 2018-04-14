@@ -22,5 +22,7 @@ TrackConfig.configure((c) => {
   c.loader = function(module) {
     return require(`./app/${module}`);
   };
+
+  c.relativeUrlRoot = '/my-app';
 });
 ```
