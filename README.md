@@ -23,6 +23,14 @@ TrackConfig.configure((c) => {
     return require(`./app/${module}`);
   };
 
+  c.localeLoader = function(module) {
+    return require(`./locales/${module}.yml`);
+  };
+
+  c.localeSelector = function(url) {
+    return url.indexOf('ja') != -1 ? 'ja' : 'en';
+  };
+
   c.relativeUrlRoot = '/my-app';
 });
 ```
