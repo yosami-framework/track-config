@@ -27,6 +27,56 @@ t.describe('TrackConfig', () => {
     });
   });
 
+  t.describe('#localeLoader', () => {
+    const subject = (() => TrackConfig.localeLoader);
+
+    t.beforeEach(() => {
+      global.TrackConfigs.localeLoader = 'hoge';
+    });
+
+    t.it('Get .localeLoader', () => {
+      t.expect(subject()).equals('hoge');
+    });
+  });
+
+  t.describe('#localeLoader=', () => {
+    const subject = (() => {
+      TrackConfig.configure((c) => {
+        c.localeLoader = 'fuga';
+      });
+    });
+
+    t.it('Set .localeLoader', () => {
+      subject();
+      t.expect(global.TrackConfigs.localeLoader).equals('fuga');
+    });
+  });
+
+  t.describe('#localeSelector', () => {
+    const subject = (() => TrackConfig.localeSelector);
+
+    t.beforeEach(() => {
+      global.TrackConfigs.localeSelector = 'hoge';
+    });
+
+    t.it('Get .localeSelector', () => {
+      t.expect(subject()).equals('hoge');
+    });
+  });
+
+  t.describe('#localeSelector=', () => {
+    const subject = (() => {
+      TrackConfig.configure((c) => {
+        c.localeSelector = 'fuga';
+      });
+    });
+
+    t.it('Set .localeSelector', () => {
+      subject();
+      t.expect(global.TrackConfigs.localeSelector).equals('fuga');
+    });
+  });
+
   t.describe('#relativeUrlRoot', () => {
     const subject = (() => TrackConfig.relativeUrlRoot);
 
